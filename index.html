@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FARMERS DAIRY </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-cow"></i>
+                    <h1> FARMERS DAIRY </h1>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#products" class="nav-link" data-page="products">Products</a></li>
+                    <li><a href="#about" class="nav-link" data-page="about">About Us</a></li>
+                    <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+                    <li><a href="#cart" class="nav-link cart-icon" data-page="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero-section">
+                <div class="hero-overlay">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2>Fresh Dairy Products Direct From Our Farm</h2>
+                            <p>100% organic, hormone-free milk and dairy products delivered straight to your doorstep</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Products</h2>
+                    <p>Fresh from our farm to your table</p>
+                </div>
+                
+                <div class="category-cards">
+                    <div class="category-card" data-category="milk">
+                        <div class="category-image">
+                            <img src="product images/cow.jpg" alt="Fresh Milk">
+                        </div>
+                        <div class="category-content">
+                            <h3>Fresh Milk</h3>
+                            <p>Pure, unadulterated milk from our grass-fed cows. Available in full cream, toned, and double toned variants.</p>
+                            <button class="btn btn-secondary view-products" data-category="milk">View Products</button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="by-products">
+                        <div class="category-image">
+                            <img src="product images/dairy products.jpg" alt="Milk By-Products">
+                        </div>
+                        <div class="category-content">
+                            <h3>Milk By-Products</h3>
+                            <p>Fresh curd, butter, ghee, paneer, and more. Made daily with traditional methods.</p>
+                            <button class="btn btn-secondary view-products" data-category="by-products">View Products</button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="vegetables">
+                        <div class="category-image">
+                            <img src="product images/vegitables.jpg" alt="Fresh Vegetables">
+                        </div>
+                        <div class="category-content">
+                            <h3>Fresh Vegetables</h3>
+                            <p>Locally grown organic vegetables, harvested daily for maximum freshness and nutrition.</p>
+                            <button class="btn btn-secondary view-products" data-category="vegetables">View Products</button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="fruits">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fresh Fruits">
+                        </div>
+                        <div class="category-content">
+                            <h3>Seasonal Fruits</h3>
+                            <p>Sweet, juicy fruits grown in our organic orchards. Seasonal and locally sourced.</p>
+                            <button class="btn btn-secondary view-products" data-category="fruits">View Products</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-section">
+                    <div class="feature-item">
+                        <i class="fas fa-truck"></i>
+                        <h3>Free Delivery</h3>
+                        <p>Free delivery in Navi Mumbai for orders above ₹200</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-leaf"></i>
+                        <h3>100% Organic</h3>
+                        <p>No chemicals, pesticides, or artificial hormones</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-award"></i>
+                        <h3>Farm Fresh</h3>
+                        <p>Harvested and delivered on the same day</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>We're here to help with any questions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Page -->
+        <section id="products" class="page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Products</h2>
+                    <p>Select a category to browse products</p>
+                </div>
+                
+                <div class="category-selector">
+                    <button class="category-tab active" data-category="all">All Products</button>
+                    <button class="category-tab" data-category="milk">Milk</button>
+                    <button class="category-tab" data-category="by-products">Milk By-Products</button>
+                    <button class="category-tab" data-category="vegetables">Vegetables</button>
+                    <button class="category-tab" data-category="fruits">Fruits</button>
+                </div>
+                
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Page -->
+        <section id="about" class="page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Our Dairy Farm</h2>
+                    <p>Our story, values, and commitment to quality</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1470114186115-9c4d0b0f6bb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our Dairy Farm">
+                    </div>
+                    <div class="about-text">
+                        <h3>Our Story</h3>
+                        <p>Fresh Meadows Dairy was established in 2005 with a simple mission: to provide fresh, high-quality dairy products directly from our farm to your table. What started as a small family-run farm has grown into a trusted local dairy business serving the Navi Mumbai community.</p>
+                        
+                        <h3>Our Commitment</h3>
+                        <p>We are committed to sustainable farming practices, animal welfare, and delivering the freshest products. Our cows are grass-fed, free-range, and never treated with artificial hormones. We believe in transparency and take pride in our farming methods.</p>
+                        
+                        <h3>Why Choose Us?</h3>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check-circle"></i> 100% organic and natural products</li>
+                            <li><i class="fas fa-check-circle"></i> Same-day harvesting and delivery</li>
+                            <li><i class="fas fa-check-circle"></i> No artificial preservatives or additives</li>
+                            <li><i class="fas fa-check-circle"></i> Hygienic processing and packaging</li>
+                            <li><i class="fas fa-check-circle"></i> Supporting local farmers and economy</li>
+                            <li><i class="fas fa-check-circle"></i> Environmentally sustainable practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Page -->
+        <section id="contact" class="page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with us for orders or inquiries</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Visit Our Farm</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>FARMERS DAIIRY<br>Navi Mumbai, Maharashtra, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p>+91 8767067884</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>sudaaher74@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Sunday: 6:00 AM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container">
+                            <h4>Our Location</h4>
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Navi Mumbai, Maharashtra</p>
+                                <p class="map-note">Google Maps location of our dairy farm</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="messageForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Page -->
+        <section id="cart" class="page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Your Shopping Cart</h2>
+                    <p>Review your items before checkout</p>
+                </div>
+                
+                <div class="cart-container">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be dynamically loaded here -->
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Your cart is empty</h3>
+                            <p>Add some delicious dairy products to your cart</p>
+                            <a href="#products" class="btn btn-primary" data-page="products">Browse Products</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">₹0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Charge</span>
+                                <span id="delivery">₹2</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Grand Total</span>
+                                <span id="grand-total">₹</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-actions">
+                            <a href="#products" class="btn btn-secondary" data-page="products">Continue Shopping</a>
+                            <button class="btn btn-primary" id="checkout-btn" disabled>Proceed to Checkout</button>
+                        </div>
+                        
+                        <div class="delivery-note">
+                            <p><i class="fas fa-info-circle"></i> Free delivery on orders above ₹200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Page -->
+        <section id="checkout" class="page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Checkout</h2>
+                    <p>Complete your order with delivery details</p>
+                </div>
+                
+                <div class="checkout-container">
+                    <div class="checkout-form">
+                        <h3>Customer Details</h3>
+                        <form id="checkoutForm">
+                            <div class="form-group">
+                                <label for="full-name">Full Name *</label>
+                                <input type="text" id="full-name" name="full-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mobile-number">Mobile Number *</label>
+                                <input type="tel" id="mobile-number" name="mobile-number" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="full-address">Full Address *</label>
+                                <textarea id="full-address" name="full-address" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="area">Area</label>
+                                    <input type="text" id="area" name="area" value="Navi Mumbai" readonly>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" value="Maharashtra" readonly>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pincode">Pincode *</label>
+                                <input type="text" id="pincode" name="pincode" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <h3>Payment Method</h3>
+                                <div class="payment-options">
+                                    <div class="payment-option">
+                                        <input type="radio" id="upi" name="payment" value="upi" checked>
+                                        <label for="upi">UPI QR Code Payment</label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" id="cod" name="payment" value="cod">
+                                        <label for="cod">Cash on Delivery (COD)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="qr-section" id="qr-section">
+                                <h4>Scan QR Code to Pay</h4>
+                                <div class="qr-code">
+                                    <div class="qr-placeholder">
+                                        <i class="fas fa-qrcode"></i>
+                                        <p>UPI QR Code</p>
+                                        <p class="qr-note">Scan with any UPI app to pay</p>
+                                    </div>
+                                </div>
+                                <p class="qr-instruction">Scan the QR code and complete the payment. Share the payment screenshot with us on WhatsApp for confirmation.</p>
+                            </div>
+                            
+                            <div class="cod-section" id="cod-section" style="display: none;">
+                                <div class="cod-notice">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <h4>Cash on Delivery Available</h4>
+                                    <p>Pay when your order is delivered. Additional ₹20 COD charge applies.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="order-items" id="checkout-items">
+                            <!-- Order items will be dynamically loaded here -->
+                        </div>
+                        
+                        <div class="order-totals">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span id="checkout-subtotal">₹0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Delivery Charge</span>
+                                <span id="checkout-delivery">₹30</span>
+                            </div>
+                            <div class="total-row">
+                                <span>COD Charge</span>
+                                <span id="checkout-cod">₹0</span>
+                            </div>
+                            <div class="total-row grand-total">
+                                <span>Grand Total</span>
+                                <span id="checkout-grand-total">₹30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Success Modal -->
+        <div class="modal" id="success-modal">
+            <div class="modal-content">
+                <div class="modal-success">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your order has been placed successfully.</p>
+                    <p>We'll contact you shortly to confirm your order details.</p>
+                    <p class="order-id">Order ID: <span id="order-id">FM-2023-001</span></p>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="continue-shopping">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-cow"></i>
+                        <h3>Fresh Meadows Dairy</h3>
+                    </div>
+                    <p>Providing fresh, organic dairy products directly from our farm to your home since 2005.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-page="home">Home</a></li>
+                        <li><a href="#products" data-page="products">Products</a></li>
+                        <li><a href="#about" data-page="about">About Us</a></li>
+                        <li><a href="#contact" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Navi Mumbai, Maharashtra</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> orders@freshmeadowsdairy.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <ul>
+                        <li>Monday - Sunday: 6:00 AM - 10:00 PM</li>
+                        <li>Delivery: 7:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Fresh Meadows Dairy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+// create a simple express server with one GET API
+
+
+
+
+
+
+
+
